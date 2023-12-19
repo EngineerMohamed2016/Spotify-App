@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/search/[id]/page.tsx", "app/artist/[id]/page.tsx", "components/Popular.js", "components/artist/Discography.tsx", "components/artist/About.tsx", "components/Tracks.tsxa", "app/search/[...query]/page.tsx", "contextApi/Context.tsx", "components/Letters.tsx", "Data/data.js", "utils/options.ts", "fetchTrackByID.js", "storeRecommeded.js"],
+  "exclude": ["node_modules"]
+}

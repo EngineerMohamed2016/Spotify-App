@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-950
+}
+
+.bg-img-sz {
+  background-size: 100% 400px;
+}
+
+
+.music-bar-5,
+.music-bar-4,
+.music-bar-3,
+.music-bar-2,
+.music-bar-1 {
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: backwards;
+  animation-name: extension;
+}
+
+.music-bar-1 {
+  animation-delay: 0s;
+}
+
+.music-bar-2 {
+  animation-delay: 0.3s;
+}
+
+.music-bar-3 {
+  animation-delay: 0.7s;
+}
+
+.music-bar-4 {
+  animation-delay: 0.3s;
+}
+
+.music-bar-5 {
+  animation-delay: 0.1s;
+}
+
+@keyframes extension {
+  100% {
+    @apply h-0
+  }
+}
+
+/* discography */
+.disco:hover .play-disco {
+  @apply bottom-[10px] visible opacity-100
+}
+
+.play-disco {
+  @apply md:collapse md:opacity-0 
+}
+
+
+/* about */
+.about:hover {
+  transform: scale(1.01);
+}
+
+/* search */
+.play-top-artist {
+  @apply md:collapse md:opacity-0 bottom-[20px] right-[20px]
+}
+
+.top-artist:hover .play-top-artist {
+  @apply bottom-[20px] visible opacity-100
+}
+
+/* scroll */
+::-webkit-scrollbar {
+  @apply w-[3px]
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black/50
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-green-500 rounded-r-lg
+}
+
+/* songs~tracks*/
+.center-in {
+  @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2
+}
+
+.bars {
+  @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-180
+}
+
+.songs-li:hover .bars {
+  @apply collapse
+}
+
+.songs-li:hover .show-icon-w-h {
+  @apply inline-block
+}
+
+.songs-li:hover .hide-icon-w-h {
+  @apply hidden
+}
+
+/* loading */
+.loading-3,
+.loading-2,
+.loading-1 {
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.loading-1 {
+  animation-name: bounce-1;
+}
+
+.loading-2 {
+  animation-name: bounce-2;
+  animation-delay: 0.2s;
+}
+
+.loading-3 {
+  animation-name: bounce-3;
+}
+
+@keyframes bounce-1 {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -30px;
+  }
+}
+
+@keyframes bounce-2 {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -30px;
+  }
+}
+
+@keyframes bounce-3 {
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: -30px;
+  }
+}
+
+/* slider of page */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+
+  border-radius: 3px;
+}
+
+.slider:hover {
+  opacity: 1;
+  @apply bg-green-500
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 11px;
+  height: 11px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+}

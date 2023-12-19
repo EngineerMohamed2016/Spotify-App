@@ -1,0 +1,1 @@
+export const alt_img = 'https://img.freepik.com/free-photo/grunge-black-concrete-textured-background_53876-124541.jpg';
